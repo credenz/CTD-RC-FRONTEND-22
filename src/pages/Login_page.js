@@ -58,7 +58,7 @@ const Login_page = () => {
 
             var loginTimeConfig = {
                 method: 'get',
-                url: `https://admin.rc.pictieee.in//RC/time`,
+                url: `http://127.0.0.1:8000/RC/time`,
                 // no header needed
             };
 
@@ -78,7 +78,7 @@ const Login_page = () => {
                     redirect: 'follow'
                     };
                       
-                    fetch("https://admin.rc.pictieee.in/auth/token/login", requestOptions)
+                    fetch("http://localhost:8000/auth/token/login", requestOptions)
                     .then(response => response.text())
                     .then(result => {
                         var tokenObject = JSON.parse(result);

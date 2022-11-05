@@ -49,7 +49,7 @@ const Timer = () => {
     const time = Date.parse(deadline) - Date.now();
     if(time<0){
       // console.log('timer ended');
-      window.location.pathname="/result";
+      // window.location.pathname="/result";
       navigate("/result")
     }
     setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
