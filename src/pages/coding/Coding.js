@@ -38,6 +38,7 @@ function Coding(){
               console.log('err',err);
             });
         console.log('questionsList', questionsList.data)
+        console.log('questionsList.total_score', questionsList.data.total_score)
         //   .then(function (response) {
         //     console.log(JSON.stringify(response.data));
         //   })
@@ -69,7 +70,7 @@ function Coding(){
             <Ldiv qnIdParam={params.id} userScoreProp={question.total_score} />
         </div>
         <div className="col-12 col-sm-12 col-sx-12 col-md-6 col-l-6 col-lg-6 col-xxl-6">
-            <Rdiv qnIdParam={params.id} />
+            <Rdiv qnIdParam={params.id} userScoreProp={question.total_score}  />
         </div>
     </div>
     )

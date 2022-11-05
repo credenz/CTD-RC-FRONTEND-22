@@ -103,7 +103,7 @@
 .QuestionBox2{
     border: 2px solid #394d65; 
     border-radius: 5px;
-    height: calc(30% - 58px);
+    height: calc(30% - 47px);
     margin-bottom: 15px;
     /* overflow-x: scroll; */
     overflow-x: hidden;
