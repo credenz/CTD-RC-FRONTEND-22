@@ -25,7 +25,7 @@ useEffect(() => {
       console.log("cookies", cookies.token)
       var config = {
           method: 'get',
-          url: 'http://localhost:8000/RC/submission',
+          url: 'https://admin.rc.pictieee.in/RC/submission',
           headers: { 
             'Authorization': `Token ${cookies.token}`
           }

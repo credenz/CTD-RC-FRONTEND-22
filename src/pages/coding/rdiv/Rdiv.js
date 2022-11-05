@@ -60,7 +60,7 @@ function Rdiv( props ) {
     // console.log("hi loadbuffer called");
     var config = {
       method: 'get',
-      url: `http://127.0.0.1:8000/RC/buffer/${props.qnIdParam}`,
+      url: `https://admin.rc.pictieee.in//RC/buffer/${props.qnIdParam}`,
       headers: {
         'Authorization': `Token ${cookies.token}`
       }
@@ -160,7 +160,7 @@ function Rdiv( props ) {
       console.log('formData - ', formdata );
       var config = {
         method: 'POST',
-        url: `http://localhost:8000/RC/submit/${props.qnIdParam}`,
+        url: `https://admin.rc.pictieee.in/RC/submit/${props.qnIdParam}`,
         headers: { 
           'Authorization': `Token ${cookies.token}`,
           // 'Content-Type': `multipart/form-data;boundary=${formdata._boundary}` 
@@ -173,7 +173,7 @@ function Rdiv( props ) {
       // console.log('question.id - ',props.qnIdParam);
       console.log('formData - ', formdata );
       // let result;
-      // fetch(`http://localhost:8000/RC/submit/${props.qnIdParam}`, config)
+      // fetch(`https://admin.rc.pictieee.in/RC/submit/${props.qnIdParam}`, config)
       //   .then(response => response.text())
       //   .then(result2 => {result = result2; 
       //   console.log(JSON.stringify(result2))
@@ -226,7 +226,7 @@ function Rdiv( props ) {
 //         console.log("cookies", cookies.token)
 //         var config = {
 //             method: 'get',
-//             url: `http://localhost:8000/RC/user`,
+//             url: `https://admin.rc.pictieee.in/RC/user`,
 //             headers: {
 //                 'Authorization': `Token ${cookies.token}`
 //             },

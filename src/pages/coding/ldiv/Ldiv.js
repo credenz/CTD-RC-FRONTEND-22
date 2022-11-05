@@ -30,10 +30,10 @@ export default function Ldiv( props ) {
             // const myArray = location2.pathname.split("/question_hub/");
             // let qnId = myArray[1];
             // console.log("qnId ", qnId);
-            console.log("cookies", `http://localhost:8000/RC/question/${props.qnIdParam}`)
+            console.log("cookies", `https://admin.rc.pictieee.in/RC/question/${props.qnIdParam}`)
             var config = {
                 method: 'get',
-                url: `http://localhost:8000/RC/question/${props.qnIdParam}`,
+                url: `https://admin.rc.pictieee.in/RC/question/${props.qnIdParam}`,
                 headers: {
                     'Authorization': `Token ${cookies.token}`
                 }
@@ -63,7 +63,7 @@ export default function Ldiv( props ) {
         console.log("textAreaVal ", textAreaVal);
         var config = {
             method: 'post',
-            url: `http://localhost:8000/RC/rc/${props.qnIdParam}`,
+            url: `https://admin.rc.pictieee.in/RC/rc/${props.qnIdParam}`,
             headers: {
                 'Authorization': `Token ${cookies.token}`,
                 'Content-type':"application/json"

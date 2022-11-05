@@ -27,7 +27,7 @@ function Coding(){
         setLoading(true);
         var config = {
             method: 'get',
-            url: `http://localhost:8000/RC/user`,
+            url: `https://admin.rc.pictieee.in/RC/user`,
             headers: {
                 'Authorization': `Token ${cookies.token}`
             },

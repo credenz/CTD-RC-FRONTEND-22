@@ -63,7 +63,7 @@ function App() {
   //   // console.log(location.pathname)
   //   var config = {
   //     method: 'get',
-  //     url: 'http://localhost:8000/RC/time',
+  //     url: 'https://admin.rc.pictieee.in/RC/time',
   //     headers: {}
   //   };
 

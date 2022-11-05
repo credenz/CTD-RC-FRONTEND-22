@@ -40,7 +40,7 @@ const ResultPage = (  ) => {
 
             var config = {
                 method: 'get',
-                url: 'http://localhost:8000/RC/rank',
+                url: 'https://admin.rc.pictieee.in/RC/rank',
                 headers: { 
                   'Authorization': `Token ${token}`
                 }
@@ -58,7 +58,7 @@ const ResultPage = (  ) => {
 
               var config2 = {
                 method: 'get',
-                url: 'http://localhost:8000/RC/allranks?page=1',
+                url: 'https://admin.rc.pictieee.in/RC/allranks?page=1',
                 headers: { 
                   'Authorization': `Token ${token}`
                 }
@@ -87,7 +87,7 @@ const ResultPage = (  ) => {
         
         // var config = {
         //     method: 'get',
-        //     url: 'http://localhost:8000/RC/rank',
+        //     url: 'https://admin.rc.pictieee.in/RC/rank',
         //     headers: { 
         //       'Authorization': `Token ${cookies.token}`
         //     }

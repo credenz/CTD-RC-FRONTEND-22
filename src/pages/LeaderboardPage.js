@@ -36,7 +36,7 @@ const LeaderboardPage = () => {
         // console.log("cookies", cookies.token)
         var config = {
             method: 'get',
-            url: `http://localhost:8000/RC/allranks?page=${params.id}`,
+            url: `https://admin.rc.pictieee.in/RC/allranks?page=${params.id}`,
             headers: { 
               'Authorization': `Token ${cookies.token}`
             }

@@ -19,7 +19,7 @@ const QuestionHubPage = () => {
     // redirect: 'follow'
     // };
 
-    // fetch("http://localhost:8000/RC/question", requestOptions)
+    // fetch("https://admin.rc.pictieee.in/RC/question", requestOptions)
     // .then(response => response.text())
     // .then(result => console.log(result))
     // .catch(error => console.log('error', error));
@@ -31,7 +31,7 @@ const QuestionHubPage = () => {
             try {
                 var config = {
                     method: 'get',
-                    url: 'http://localhost:8000/RC/question',
+                    url: 'https://admin.rc.pictieee.in/RC/question',
                     headers: { 
                       'Authorization': `Token ${cookies.token}`
                     }

@@ -19,7 +19,7 @@ const Timer = () => {
     const loadData = async () => {
       var config = {
         method: 'get',
-        url: `http://127.0.0.1:8000/RC/time`,
+        url: `https://admin.rc.pictieee.in//RC/time`,
         // no header required
     };
 
