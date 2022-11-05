@@ -48,8 +48,10 @@ export default function Ldiv( props ) {
             //     console.log(JSON.stringify(response.data));
             //   })
             setQuestion(questionsList.data);
-            setTextAreaVal(questionsList.data.input_format);
-            setRunOutputVal(questionsList.data.output_format)
+            // setTextAreaVal(questionsList.data.input_format);
+            // setTextAreaVal("Input");
+            // setRunOutputVal(questionsList.data.output_format)
+            setRunOutputVal("Output");
             setLoading(false);
         }
         loadData();
@@ -166,6 +168,8 @@ export default function Ldiv( props ) {
                                     <OutputBoxWithProps output={question.sample_output} />
                                 </div>
                             </div> */}
+                            <b><h4><u>Constains</u> - </h4></b>
+                            {question.constraints}
                             
                         </Card.Text>
                     </Card.Body>
