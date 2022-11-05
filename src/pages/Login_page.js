@@ -78,7 +78,7 @@ const Login_page = () => {
                     redirect: 'follow'
                     };
                       
-                    fetch("http://localhost:8000/auth/token/login", requestOptions)
+                    fetch("https://admin.rc.pictieee.in/auth/token/login", requestOptions)
                     .then(response => response.text())
                     .then(result => {
                         var tokenObject = JSON.parse(result);
