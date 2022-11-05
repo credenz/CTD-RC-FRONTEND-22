@@ -1,0 +1,13 @@
+.heightManage{
+    height: calc(100vh - 120px);
+}
+
+.backbtn{
+    height: 150!important;
+    width: 150!important;
+    margin-top: 50px;
+}
+
+.makethisscrollable{
+    overflow-y: auto;
+}
