@@ -252,7 +252,7 @@ const ResultPage = (  ) => {
                         <Col xxl={6} lg={6} md={6} sm={12} xs={12}>
                             <Image className="myResultImage" draggable="false" src={bronze} height="160px" width="160px" />
                             {/* <br /> */}
-                            <p className="text-white">{`${loading ? "Rank 3" : userRank3Data.name}`} : {`${loading ? "2000" : userRank1Data.total_score}`}</p>
+                            <p className="text-white">{`${loading ? "Rank 3" : userRank3Data.name}`} : {`${loading ? "2000" : userRank3Data.total_score}`}</p>
                         </Col>
                     </Row>
                     {/* </Row> */}
