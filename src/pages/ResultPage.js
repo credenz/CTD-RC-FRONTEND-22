@@ -10,9 +10,21 @@ const bronze = require("../images/bronze 3.png")
 
 const ResultPage = (  ) => {
     const [userRankData, setUserRankData] = useState({
-        rank: 1,
-        name: "kedar",
+        rank: 10,
+        name: "Vijay",
         total_score: 10,
+      })
+      const [userRank1Data, setUserRank1Data] = useState({
+        name: "Kedar",
+        total_score: 50,
+      })
+      const [userRank2Data, setUserRank2Data] = useState({
+        name: "Devraj",
+        total_score: 49,
+      })
+      const [userRank3Data, setUserRank3Data] = useState({
+        name: "Jahan",
+        total_score: 45,
       })
     const [loading, setLoading] = useState(true);
     const [cookies, removeCookies] = useCookies(["token"]);
@@ -55,12 +67,30 @@ const ResultPage = (  ) => {
               let leaderdatarank = await axios(config2)
 
               console.log("leaderdatarank.data.results ", leaderdatarank.data.results)
+              console.log("leaderdatarank.data.results[0].name ", leaderdatarank.data.results[0].name)
+              console.log("leaderdatarank.data.results[1].name ", leaderdatarank.data.results[1].name)
+              console.log("leaderdatarank.data.results[2].name ", leaderdatarank.data.results[2].name)
               let resultdata = leaderdatarank.data.results;
               setTopRankData((data) => [...data, ...resultdata])
+              setUserRank1Data({
+                name: leaderdatarank.data.results[0].name,
+                total_score: leaderdatarank.data.results[0].total_score,
+              })
+              setUserRank2Data({
+                name: leaderdatarank.data.results[1].name,
+                total_score: leaderdatarank.data.results[1].total_score,
+              })
+              setUserRank3Data({
+                name: leaderdatarank.data.results[2].name,
+                total_score: leaderdatarank.data.results[2].total_score,
+              })
               console.log("topRankData ", topRankData)
               console.log("topRankData[0] ", topRankData[0])
               console.log("topRankData[1] ", topRankData[1])
               console.log("topRankData[2] ", topRankData[2]) 
+              console.log("userRank1Data ", userRank1Data)
+              console.log("userRank2Data ", userRank2Data)
+              console.log("userRank3Data ", userRank3Data) 
 
             setLoading(false);
         }
@@ -193,7 +223,7 @@ const ResultPage = (  ) => {
                             </Card> */}
                             <Image className="myResultImage" draggable="false" src={gold} height="160px" width="160px" />
                             {/* <br /> */}
-                            <p className="text-white">{`${loading ? "Rank 1" : topRankData[0].name}`}</p>
+                            <p className="text-white">{`${loading ? "Rank 1" : userRank1Data.name}`} : {`${loading ? "4000" : userRank1Data.total_score}`}</p>
                         </Col>
                     </Row>
                     <Row className="my-3 mx-3 px-2">
@@ -208,7 +238,7 @@ const ResultPage = (  ) => {
                             </Card> */}
                             <Image className="myResultImage" draggable="false" src={silver} height="160px" width="160px" />
                             {/* <br /> */}
-                            <p className="text-white">{`${loading ? "Rank 2" : topRankData[0].name}`}</p>
+                            <p className="text-white">{`${loading ? "Rank 2" : userRank2Data.name}`} : {`${loading ? "2300" : userRank2Data.total_score}`}</p>
 
                             {/* <Card border="success" bg="light" style={{ width: '13rem' }} className="mx-2 px-2">
                                 <Card.Header ><h5>Rank 3</h5></Card.Header>
@@ -222,7 +252,7 @@ const ResultPage = (  ) => {
                         <Col xxl={6} lg={6} md={6} sm={12} xs={12}>
                             <Image className="myResultImage" draggable="false" src={bronze} height="160px" width="160px" />
                             {/* <br /> */}
-                            <p className="text-white">{`${loading ? "Rank 3" : topRankData[0].name}`}</p>
+                            <p className="text-white">{`${loading ? "Rank 3" : userRank3Data.name}`} : {`${loading ? "2000" : userRank1Data.total_score}`}</p>
                         </Col>
                     </Row>
                     {/* </Row> */}
