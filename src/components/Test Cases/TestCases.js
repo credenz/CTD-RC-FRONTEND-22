@@ -16,6 +16,7 @@ const TestCases = () => {
     const params = useParams();
     // const location = useLocation();
     const { state } = useLocation();
+    // const location = useLocation();
  ;   const [questions, setQuestions] = useState({
         "cases": [],
         "error": ""

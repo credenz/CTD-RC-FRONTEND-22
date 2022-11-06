@@ -71,10 +71,10 @@ function Rdiv( props ) {
       // console.log(JSON.stringify(response.data));
       console.log('response for buffer',response.data);
       if(JSON.stringify(response.data)==='Failed')return;
-      updatelang(response.data.language);
+      updatelang(response.data.language==="c++" ? "c_cpp" : response.data.language);
       if(response.data.language==="c++" || response.data.language==="c")setcompilerLang("c_cpp");
       else setcompilerLang(response.data.language);
-      console.log("updated lang afetr buffer", updatelang);
+      console.log("updated lang afetr buffer", compilerLang);
       setUserInpText(response.data.code);
       console.log("updated code afetr buffer", userInpText);
       localStorage.setItem(`${lang}${props.qnIdParam}`,response.data.code);
@@ -300,7 +300,7 @@ if (loading) {
             enableLiveAutocompletion: true,
             enableSnippets: true,
             showLineNumbers: true,
-            tabSize: 1,
+            tabSize: 4,
             showPrintMargin: false, // boolean: true if show the vertical print margin
             showGutter: true, // boolean: true if show line gutter
             wrap: true,
