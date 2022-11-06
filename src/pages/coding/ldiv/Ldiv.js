@@ -102,7 +102,7 @@ export default function Ldiv( props ) {
             <div className="row mb-3">
                 <Col className="mt-1 h-100">
                     <Pagination >
-                        {[...Array(6).keys()].map((x) => (
+                        {[...Array(5).keys()].map((x) => (
                             <Pagination.Item  key={x + 1} className="givePaginationTheme" active={parseInt(props.qnIdParam) === x+1} onClick={() => { if(x+1 !== parseInt(props.qnIdParam)){navigate(`/question_hub/${x+1}`); window.location.reload();} }} >{x + 1}</Pagination.Item>
                         ))}
                     </Pagination>

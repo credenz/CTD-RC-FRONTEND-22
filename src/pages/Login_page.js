@@ -232,7 +232,7 @@ const Login_page = () => {
                                             <i className="fa-solid fa-key" />
                                         </label>
                                         <span><input name="password" onKeyPress={handleEnter} tabIndex="2" value={formValue.password} type="password" id="password" className="myInput" placeholder="Password" onChange={onChange1} /></span>
-                                        <button onClick={validate} onKeyDown={handleEnter} tabIndex="3" className="myButton text-white">Login</button>
+                                        <button disabled={"true"} onClick={validate} onKeyDown={handleEnter} tabIndex="3" className="myButton text-white">Login</button>
                                     {/* </form> */}
                                 </Card.Text>
                             </Card.Body>
