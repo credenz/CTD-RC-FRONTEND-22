@@ -14,7 +14,7 @@ const Timer = () => {
   const [seconds, setSeconds] = useState(0);
   // var deadline = "November, 06, 2022";
   // var deadline = "06 Nov 2022 12:00:00"; 
-  const [deadline, setDeadline] = useState("06 Nov 2022 12:00:00")
+  const [deadline, setDeadline] = useState("06 Nov 2022 13:00:00")
   useEffect(() => {
     const loadData = async () => {
       var config = {
