@@ -41,7 +41,7 @@ const QuestionHubPage = () => {
                   .catch(function (error) {
                       console.log(error);
                     });
-                console.log('questionsList',questionsList.data)
+                // console.log('questionsList',questionsList.data)
                     //   .then(function (response) {
                     //     console.log(JSON.stringify(response.data));
                     //   })
