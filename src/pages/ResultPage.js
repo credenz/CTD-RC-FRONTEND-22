@@ -18,19 +18,7 @@ const ResultPage = (  ) => {
     const [cookies, removeCookies] = useCookies(["token"]);
     const location = useLocation();
 
-    const [topRankData, setTopRankData] = useState([{
-        name: "John Doe1",
-        total_score: 72,
-      },
-      {
-        name: "John Doe2",
-        total_score: 67,
-      },
-      {
-        name: "John Doe3",
-        total_score: 63,
-      }
-      ])
+    const [topRankData, setTopRankData] = useState([])
 
       useEffect(() => {
         let token = localStorage.getItem("token");

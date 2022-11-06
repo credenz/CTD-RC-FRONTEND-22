@@ -60,7 +60,7 @@ function Rdiv( props ) {
     // console.log("hi loadbuffer called");
     var config = {
       method: 'get',
-      url: `https://admin.rc.pictieee.in//RC/buffer/${props.qnIdParam}`,
+      url: `https://admin.rc.pictieee.in/RC/buffer/${props.qnIdParam}`,
       headers: {
         'Authorization': `Token ${cookies.token}`
       }
@@ -69,13 +69,14 @@ function Rdiv( props ) {
     axios(config)
     .then(function (response) {
       // console.log(JSON.stringify(response.data));
-      console.log(response.data);
+      console.log('response for buffer',response.data);
       if(JSON.stringify(response.data)==='Failed')return;
       updatelang(response.data.language);
-      if(response.data.language==="c++" || response.data.language==="c")updatelang("c_cpp");
-      else updatelang(response.data.language);
-
+      if(response.data.language==="c++" || response.data.language==="c")setcompilerLang("c_cpp");
+      else setcompilerLang(response.data.language);
+      console.log("updated lang afetr buffer", updatelang);
       setUserInpText(response.data.code);
+      console.log("updated code afetr buffer", userInpText);
       localStorage.setItem(`${lang}${props.qnIdParam}`,response.data.code);
     })
   }

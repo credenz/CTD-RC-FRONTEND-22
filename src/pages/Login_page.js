@@ -55,6 +55,24 @@ const Login_page = () => {
             //     "username": "admins",
             //     "password": "admins"
             //   });
+            localStorage.setItem('c1', ` `)
+            localStorage.setItem('c_cpp1', ``)
+            localStorage.setItem('python1', ` `)
+            localStorage.setItem('c2', ` `)
+            localStorage.setItem('c_cpp2', ``)
+            localStorage.setItem('python2', ` `)
+            localStorage.setItem('c3', ` `)
+            localStorage.setItem('c_cpp3', ``)
+            localStorage.setItem('python3', ` `)
+            localStorage.setItem('c4', ` `)
+            localStorage.setItem('c_cpp4', ``)
+            localStorage.setItem('python4', ` `)
+            localStorage.setItem('c5', ` `)
+            localStorage.setItem('c_cpp5', ``)
+            localStorage.setItem('python5', ` `)
+            localStorage.setItem('c6', ` `)
+            localStorage.setItem('c_cpp6', ``)
+            localStorage.setItem('python6', ` `)
 
             var loginTimeConfig = {
                 method: 'get',

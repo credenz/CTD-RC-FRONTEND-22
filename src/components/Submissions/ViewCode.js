@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap'
 import "./Submissions.css";
-
+// import AceEditor from "react-ace";
 
 const ViewCode = (submittedCode) => {
   
@@ -64,6 +64,21 @@ return (
           Morbi leo risus, porta ac
           consectetur ac, vestibulum at eros. */}
           {submittedCode.code}
+          {/* <AceEditor
+              mode={"c_cpp"}
+              theme="monokai"
+              name="UNIQUE_ID_OF_DIV"
+              style={{ height: "100%", width: "100%" }}
+              value={submittedCode.code}
+              editorProps={{ $blockScrolling: true }}
+              setOptions={{
+                tabSize: 1,
+                showPrintMargin: false, // boolean: true if show the vertical print margin
+                showGutter: true, // boolean: true if show line gutter
+                wrap: true,
+                readOnly: true
+              }}
+            /> */}
               
         </p>
           
