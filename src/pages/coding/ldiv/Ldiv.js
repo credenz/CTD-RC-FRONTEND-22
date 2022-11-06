@@ -43,7 +43,7 @@ export default function Ldiv( props ) {
             //   .catch(function (error) {
             //       console.log(error);
             //     });
-            console.log('questionsList in ldiv', questionsList.data)
+            // console.log('questionsList in ldiv', questionsList.data)
             //   .then(function (response) {
             //     console.log(JSON.stringify(response.data));
             //   })
@@ -75,7 +75,7 @@ export default function Ldiv( props ) {
 
           await axios(config)
             .then(function (response) {
-            console.log('res backL ',JSON.stringify(response.data));
+            // console.log('res backL ',JSON.stringify(response.data));
             setRunOutputVal(response.data.output);
             })
             .catch(function (error) {
